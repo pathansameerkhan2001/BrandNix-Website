@@ -33,7 +33,7 @@ export const Footer: React.FC = () => {
                 <MessageCircle className="w-4 h-4" />
               </Link>
               <Link
-                href="https://instagram.com"
+                href="https://www.instagram.com/_brandnix"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
@@ -42,7 +42,7 @@ export const Footer: React.FC = () => {
                 <Instagram className="w-4 h-4" />
               </Link>
               <Link
-                href="https://facebook.com"
+                href="https://www.facebook.com/share/1JoBtpW4dG/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Facebook"
@@ -51,7 +51,7 @@ export const Footer: React.FC = () => {
                 <Facebook className="w-4 h-4" />
               </Link>
               <Link
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/company/adnix1/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
@@ -173,8 +173,8 @@ export const Footer: React.FC = () => {
               </li>
               <li className="flex items-center gap-2.5">
                 <Mail className="w-4 h-4 text-brand-orange flex-shrink-0" />
-                <a href="mailto:hello@brandnix.in" className="hover:text-brand-orange transition-colors">
-                  hello@brandnix.in
+                <a href="mailto:brandnix.in@gmail.com" aria-label="Email Brandnix" className="hover:text-brand-orange transition-colors">
+                  brandnix.in@gmail.com
                 </a>
               </li>
               <li className="flex items-center gap-2.5">

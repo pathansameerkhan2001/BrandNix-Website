@@ -45,7 +45,8 @@ export const CtaSection: React.FC = () => {
             {/* 4. Primary Action Button */}
             <div>
               <Button
-                href="mailto:contact@brandnix.com"
+                href="mailto:brandnix.in@gmail.com"
+                aria-label="Email Brandnix"
                 variant="primary"
                 size="lg"
                 className="px-8 sm:px-10 py-4 text-base font-bold shadow-brand-glow"

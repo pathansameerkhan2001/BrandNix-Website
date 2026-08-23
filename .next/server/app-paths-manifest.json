@@ -1,7 +1,15 @@
 {
-  "/page": "app/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
   "/about/page": "app/about/page.js",
   "/packages/page": "app/packages/page.js",
+  "/contact/page": "app/contact/page.js",
+  "/services/[category]/[slug]/page": "app/services/[category]/[slug]/page.js",
+  "/portfolio/page": "app/portfolio/page.js",
+  "/blog/page": "app/blog/page.js",
+  "/page": "app/page.js",
+  "/services/page": "app/services/page.js",
+  "/services/social-media/page": "app/services/social-media/page.js",
   "/services/web-development/page": "app/services/web-development/page.js",
-  "/contact/page": "app/contact/page.js"
+  "/services/digital-marketing/page": "app/services/digital-marketing/page.js",
+  "/services/other-services/page": "app/services/other-services/page.js"
 }

@@ -36,7 +36,7 @@ export const ServicesCta: React.FC = () => {
           {/* Right: CTA Button */}
           <div className="flex-shrink-0 w-full sm:w-auto">
             <Button
-              href="/#contact"
+              href="/contact"
               variant="primary"
               size="lg"
               className="w-full sm:w-auto px-8 py-4 text-base font-bold shadow-brand-glow"

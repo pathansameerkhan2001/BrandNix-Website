@@ -37,7 +37,7 @@ export const PackagesCta: React.FC = () => {
           {/* Right: Dual CTAs */}
           <div className="flex flex-col sm:flex-row items-center gap-4 flex-shrink-0 w-full lg:w-auto">
             <Button
-              href="/#contact"
+              href="/contact"
               variant="primary"
               size="lg"
               className="w-full sm:w-auto px-8 py-4 text-base font-bold shadow-brand-glow"

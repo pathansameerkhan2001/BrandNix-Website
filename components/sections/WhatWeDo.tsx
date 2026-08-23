@@ -118,7 +118,7 @@ export const WhatWeDo: React.FC = () => {
           className="mt-12 sm:mt-16 flex justify-center"
         >
           <Button
-            href="#contact"
+            href="/services"
             variant="outline"
             size="md"
             className="border-gray-700 hover:border-brand-orange text-white hover:text-brand-orange px-8 py-3.5 rounded-xl text-sm font-semibold"

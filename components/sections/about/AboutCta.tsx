@@ -36,7 +36,7 @@ export const AboutCta: React.FC = () => {
           {/* Right: CTA Button */}
           <div className="flex-shrink-0 w-full sm:w-auto">
             <Button
-              href="#contact"
+              href="/contact"
               variant="primary"
               size="md"
               className="w-full sm:w-auto px-7 py-3.5 text-sm sm:text-base font-bold shadow-brand-glow"

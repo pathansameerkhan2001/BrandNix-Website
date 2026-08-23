@@ -8,14 +8,14 @@ interface TeamMember {
   id: string;
   name: string;
   role: string;
-  roleIconType: 'marketing' | 'operations' | 'technology' | 'design' | 'hr' | 'systems' | 'support' | 'finance';
+  roleIconType: 'marketing' | 'operations' | 'technology' | 'design' | 'hr' | 'systems' | 'support' | 'finance' | 'sales';
   expertise: string[];
   imageSrc: string;
   objectPosition?: string;
   waveOffset: number; // in pixels
 }
 
-// 8 Distinct 3D Multi-Color Role Icons
+// 9 Distinct 3D Multi-Color Role Icons
 const MarketingRoleIcon = () => (
   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
     <rect x="2" y="14" width="4" height="7" rx="1" fill="#3B82F6" />
@@ -97,6 +97,16 @@ const FinanceRoleIcon = () => (
   </svg>
 );
 
+const SalesRoleIcon = () => (
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="12" cy="12" r="9" fill="#3B82F6" fillOpacity="0.15" stroke="#3B82F6" strokeWidth="1.5" />
+    <rect x="7" y="12" width="2.5" height="5" rx="0.75" fill="#3B82F6" />
+    <rect x="10.75" y="9" width="2.5" height="8" rx="0.75" fill="#22C55E" />
+    <rect x="14.5" y="6" width="2.5" height="11" rx="0.75" fill="#F59E0B" />
+    <path d="M7 10L11 7L16 4M16 4H13M16 4V7" stroke="#F59E0B" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+  </svg>
+);
+
 const ROLE_ICONS = {
   marketing: MarketingRoleIcon,
   operations: OperationsRoleIcon,
@@ -106,6 +116,7 @@ const ROLE_ICONS = {
   systems: SystemsRoleIcon,
   support: SupportRoleIcon,
   finance: FinanceRoleIcon,
+  sales: SalesRoleIcon,
 };
 
 // Exact team mapping using verified files in public/images/Team
@@ -116,7 +127,7 @@ const TEAM_MEMBERS: TeamMember[] = [
     role: 'Marketing & Growth',
     roleIconType: 'marketing',
     expertise: ['Digital Marketing', 'Branding', 'Advertising', 'SEO', 'Social Media', 'Lead Generation'],
-    imageSrc: '/images/Team/Arifullah.png',
+    imageSrc: '/images/Team/Arifullah.jpeg',
     objectPosition: 'center 15%',
     waveOffset: 0,
   },
@@ -190,15 +201,25 @@ const TEAM_MEMBERS: TeamMember[] = [
     objectPosition: 'center 15%',
     waveOffset: 0,
   },
+  {
+    id: 'shafi-shaik',
+    name: 'Shafi Shaik',
+    role: 'Sales & Business Development',
+    roleIconType: 'sales',
+    expertise: ['Sales', 'Business Development', 'Client Acquisition', 'Lead Generation', 'Client Relations', 'Business Growth'],
+    imageSrc: '/images/Team/Shafi.jpeg',
+    objectPosition: 'center 15%',
+    waveOffset: -4,
+  },
 ];
 
-// Triplicate the 8 team members for seamless infinite marquee loop
+// Triplicate the 9 team members for seamless infinite marquee loop
 const TRAIN_ITEMS = [...TEAM_MEMBERS, ...TEAM_MEMBERS, ...TEAM_MEMBERS];
 
 // Constants for card width + gap
 const CARD_WIDTH = 330; // approx px per card
 const GAP = 28; // gap px
-const ONE_SET_WIDTH = TEAM_MEMBERS.length * (CARD_WIDTH + GAP); // 8 * 358 = 2864px
+const ONE_SET_WIDTH = TEAM_MEMBERS.length * (CARD_WIDTH + GAP); // 9 * 358 = 3222px
 
 export const AboutTeam: React.FC = () => {
   // SINGLE SOURCE OF TRUTH for pause state

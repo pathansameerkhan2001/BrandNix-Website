@@ -251,8 +251,8 @@ export const ContactFormSection: React.FC = () => {
                   </div>
                   <div>
                     <h3 className="font-playfair text-sm font-bold text-[#08111F] dark:text-white">Email Us</h3>
-                    <Link href="mailto:hello@brandnix.in" className="font-inter text-sm sm:text-base font-bold text-brand-orange hover:underline block">
-                      hello@brandnix.in
+                    <Link href="mailto:brandnix.in@gmail.com" aria-label="Email Brandnix" className="font-inter text-sm sm:text-base font-bold text-brand-orange hover:underline block">
+                      brandnix.in@gmail.com
                     </Link>
                     <p className="font-inter text-[11px] text-gray-500 dark:text-gray-400 mt-0.5">
                       We reply within 24 hours
@@ -302,7 +302,7 @@ export const ContactFormSection: React.FC = () => {
               <div className="flex items-center gap-3">
                 {/* Facebook */}
                 <Link
-                  href="https://facebook.com"
+                  href="https://www.facebook.com/share/1JoBtpW4dG/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-10 h-10 rounded-xl bg-[#1877F2]/10 hover:bg-[#1877F2] text-[#1877F2] hover:text-white border border-[#1877F2]/25 flex items-center justify-center font-bold text-sm transition-all"
@@ -312,7 +312,7 @@ export const ContactFormSection: React.FC = () => {
                 </Link>
                 {/* Instagram */}
                 <Link
-                  href="https://instagram.com"
+                  href="https://www.instagram.com/_brandnix"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-10 h-10 rounded-xl bg-pink-500/10 hover:bg-gradient-to-tr hover:from-[#F59E0B] hover:via-[#EC4899] hover:to-[#8B5CF6] text-pink-500 hover:text-white border border-pink-500/25 flex items-center justify-center font-bold text-xs transition-all"
@@ -322,7 +322,7 @@ export const ContactFormSection: React.FC = () => {
                 </Link>
                 {/* LinkedIn */}
                 <Link
-                  href="https://linkedin.com"
+                  href="https://www.linkedin.com/company/adnix1/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-10 h-10 rounded-xl bg-[#0A66C2]/10 hover:bg-[#0A66C2] text-[#0A66C2] hover:text-white border border-[#0A66C2]/25 flex items-center justify-center font-bold text-xs transition-all"

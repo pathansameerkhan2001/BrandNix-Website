@@ -25,9 +25,42 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: 'Brandnix Digital Solutions | Where Vision Becomes Growth',
+  metadataBase: new URL('https://brandnix.in'),
+  title: {
+    default: 'Brandnix Digital Solutions | Where Vision Becomes Growth',
+    template: '%s | Brandnix Digital Solutions',
+  },
   description:
-    'Brandnix Digital Solutions — Where Vision Becomes Growth. Digital marketing, custom web development, SEO, and brand growth.',
+    'Brandnix Digital Solutions — Where Vision Becomes Growth. High-performance custom web development, digital marketing, SEO, social media growth, and startup solutions.',
+  keywords: [
+    'Brandnix',
+    'Brandnix Digital Solutions',
+    'Web Development',
+    'Digital Marketing Agency',
+    'SEO Services',
+    'Social Media Marketing',
+    'E-Commerce Solutions',
+    'Next.js Web Development',
+    'Lead Generation',
+  ],
+  authors: [{ name: 'Brandnix Digital Solutions' }],
+  creator: 'Brandnix Digital Solutions',
+  publisher: 'Brandnix Digital Solutions',
+  openGraph: {
+    title: 'Brandnix Digital Solutions | Where Vision Becomes Growth',
+    description:
+      'Brandnix Digital Solutions — Where Vision Becomes Growth. High-performance custom web development, digital marketing, SEO, and social media scaling.',
+    url: 'https://brandnix.in',
+    siteName: 'Brandnix Digital Solutions',
+    locale: 'en_IN',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Brandnix Digital Solutions',
+    description:
+      'Where Vision Becomes Growth — Digital Marketing, Web Development, and Social Media Solutions.',
+  },
   icons: {
     icon: [
       { url: '/favicon.svg?v=3', type: 'image/svg+xml' },
