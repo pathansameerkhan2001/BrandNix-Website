@@ -19,10 +19,15 @@ import {
   CustomSolutionsIllustration,
 } from '@/components/common/PackageIllustrations';
 
+export type PackageIllustrationProps = {
+  className?: string;
+  size?: string | number;
+};
+
 interface PackageItem {
   id: string;
   title: string;
-  illustration: React.ComponentType<{ className?: string; size?: number }>;
+  illustration: React.ComponentType<PackageIllustrationProps>;
   features: string[];
 }
 

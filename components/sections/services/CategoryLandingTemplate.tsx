@@ -39,7 +39,14 @@ interface CategoryTemplateProps {
   data: ServiceCategoryData;
 }
 
-const CATEGORY_ILLUSTRATION_MAP: Record<string, React.ComponentType<{ className?: string; size?: number }>> = {
+export type ServiceVisualProps = {
+  className?: string;
+  size?: string | number;
+};
+
+export type ServiceVisual = React.ComponentType<ServiceVisualProps>;
+
+const CATEGORY_ILLUSTRATION_MAP: Record<string, ServiceVisual> = {
   'custom-website-development': WebDevServiceIllustration,
   'ecommerce-development': EcommerceServiceIllustration,
   'cms-development': WebsiteDevIllustration,

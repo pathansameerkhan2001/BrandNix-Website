@@ -2,9 +2,9 @@
 
 import React from 'react';
 
-interface IllustrationProps {
+export interface IllustrationProps {
   className?: string;
-  size?: number;
+  size?: string | number;
 }
 
 // 01 - Website Development Illustration

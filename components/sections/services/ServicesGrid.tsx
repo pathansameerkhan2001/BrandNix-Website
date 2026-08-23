@@ -17,11 +17,16 @@ import {
   CroServiceIllustration,
 } from '@/components/common/ServiceIllustrations';
 
+export type ServiceIllustrationProps = {
+  className?: string;
+  size?: string | number;
+};
+
 interface ServiceItem {
   id: string;
   title: string;
   description: string;
-  illustration: React.ComponentType<{ className?: string; size?: number }>;
+  illustration: React.ComponentType<ServiceIllustrationProps>;
   href: string;
 }
 
