@@ -1,0 +1,131 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #0B1320;
+  --foreground: #FFFFFF;
+  --brand-dark: #0B1320;
+  --brand-blue: #13243B;
+  --brand-orange: #F59E0B;
+  --brand-warm: #FFE7B3;
+  --brand-white: #FFFFFF;
+  --brand-gray: #F7F8FA;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: #0B1320;
+  color: #FFFFFF;
+  font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+  min-height: 100vh;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+/* ==================== GLOBAL THEME TRANSITION ==================== */
+*, *::before, *::after {
+  transition-property: background-color, border-color, color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
+}
+
+/* Exclude animations from transition override */
+svg line, svg circle, svg path, .no-theme-transition {
+  transition-property: none !important;
+}
+
+/* ==================== LOGO THEME VISIBILITY ==================== */
+/* Dark Mode Logo (Default) */
+.dark-logo {
+  display: block !important;
+}
+.light-logo {
+  display: none !important;
+}
+
+/* Light Mode Logo */
+html.light .dark-logo,
+body.light .dark-logo {
+  display: none !important;
+}
+html.light .light-logo,
+body.light .light-logo {
+  display: block !important;
+}
+
+/* ==================== LIGHT MODE GLOBAL STYLES ==================== */
+html.light body,
+body.light {
+  background-color: #F7F8FA !important;
+  color: #0B1320 !important;
+}
+
+/* Accessible focus ring */
+:focus-visible {
+  outline: 2px solid #F59E0B;
+  outline-offset: 3px;
+}
+
+/* Custom text selection */
+::selection {
+  background-color: #F59E0B;
+  color: #FFFFFF;
+}
+
+/* Smooth custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0B1320;
+}
+
+html.light ::-webkit-scrollbar-track {
+  background: #F7F8FA;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #13243B;
+  border-radius: 4px;
+}
+
+html.light ::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #F59E0B;
+}
+
+/* No scrollbar utility */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}

@@ -1,0 +1,31 @@
+<svg width="340" height="76" viewBox="0 0 340 76" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Monogram -->
+  <g transform="translate(6, 4)">
+    <path
+      d="M2 10H38C48 10 54 16 54 26C54 36 48 42 38 42H18V64H2V10ZM18 26H36C39 26 40 24 40 22C40 20 39 18 36 18H18V26Z"
+      fill="#FFFFFF"
+    />
+    <path
+      d="M6 40L28 58L68 14"
+      stroke="#F59E0B"
+      stroke-width="11"
+      stroke-linecap="square"
+      stroke-linejoin="miter"
+      stroke-miterlimit="4"
+    />
+    <path
+      d="M60 4L78 12L68 28L60 4Z"
+      fill="#F59E0B"
+    />
+  </g>
+
+  <!-- Wordmark -->
+  <text x="108" y="42" fill="#FFFFFF" font-family="'Inter', system-ui, -apple-system, sans-serif" font-weight="800" font-size="33" letter-spacing="4">
+    BRAND<tspan fill="#F59E0B">NIX</tspan>
+  </text>
+
+  <!-- Tagline -->
+  <line x1="94" y1="61" x2="114" y2="61" stroke="#F59E0B" stroke-width="2.5" stroke-linecap="round" />
+  <text x="122" y="64" fill="#FFFFFF" font-family="'Inter', system-ui, -apple-system, sans-serif" font-weight="600" font-size="10" letter-spacing="3.4">WHERE VISION BECOMES GROWTH</text>
+  <line x1="316" y1="61" x2="336" y2="61" stroke="#F59E0B" stroke-width="2.5" stroke-linecap="round" />
+</svg>
