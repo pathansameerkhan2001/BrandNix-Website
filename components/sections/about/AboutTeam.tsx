@@ -349,7 +349,7 @@ export const AboutTeam: React.FC = () => {
 
       {/* ================= CONTINUOUS TEAM TRAIN TRACK ================= */}
       <div
-        className="relative w-full overflow-hidden group/train py-6 select-none"
+        className="relative w-full overflow-hidden group/train py-6 select-none touch-pan-y"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
         onTouchStart={() => setIsHovered(true)}
@@ -362,9 +362,10 @@ export const AboutTeam: React.FC = () => {
         {/* Single Coordinated Framer Motion Track */}
         <motion.div
           style={{ x }}
-          className="flex gap-7 w-max cursor-grab active:cursor-grabbing"
+          className="flex gap-7 w-max cursor-grab active:cursor-grabbing touch-pan-y"
           drag="x"
           dragConstraints={{ left: -ONE_SET_WIDTH * 2, right: 0 }}
+          dragElastic={0.05}
           onDragStart={() => setIsHovered(true)}
           onDragEnd={() => setIsHovered(false)}
         >
