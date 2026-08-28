@@ -43,21 +43,21 @@ export const BrandnixLogo: React.FC<BrandnixLogoProps> = ({
         />
       ) : (
         <>
-          {/* 1. Dark Mode Logo (White + Orange) - Shown in dark mode */}
+          {/* 1. Dark Mode Logo (White + Orange) - Shown in desktop dark mode */}
           <img
             src="/images/brandnix-logo-dark.png"
             alt="Brandnix Digital Solutions — Where Vision Becomes Growth"
-            className={`w-auto ${heightStyles} object-contain transition-opacity duration-150 group-hover:opacity-95 hidden dark:block dark-logo`}
+            className={`w-auto ${heightStyles} object-contain transition-opacity duration-150 group-hover:opacity-95 hidden lg:dark:block dark-logo`}
             width={763}
             height={188}
             loading="eager"
           />
 
-          {/* 2. Light Mode Logo (Navy + Orange) - Shown in light mode */}
+          {/* 2. Light Mode Logo (Navy + Orange) - Shown in light mode & on mobile */}
           <img
             src="/images/brandnix-logo-light.png"
             alt="Brandnix Digital Solutions — Where Vision Becomes Growth"
-            className={`w-auto ${heightStyles} object-contain transition-opacity duration-150 group-hover:opacity-95 block dark:hidden light-logo`}
+            className={`w-auto ${heightStyles} object-contain transition-opacity duration-150 group-hover:opacity-95 block lg:dark:hidden light-logo`}
             width={939}
             height={247}
             loading="eager"

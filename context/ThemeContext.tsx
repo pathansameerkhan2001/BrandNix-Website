@@ -1,6 +1,6 @@
 'use client';
 
-import React, { createContext, useContext, useEffect, useState } from 'react';
+import React, { createContext, useContext, useEffect, useState, useCallback } from 'react';
 
 type Theme = 'dark' | 'light';
 
@@ -14,32 +14,46 @@ const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [theme, setThemeState] = useState<Theme>('light');
-  const [mounted, setMounted] = useState(false);
 
-  useEffect(() => {
-    setMounted(true);
-    const saved = localStorage.getItem('brandnix-theme') as Theme | null;
-    if (saved === 'dark') {
-      setThemeState('dark');
+  // Helper to apply or remove dark/light classes to <html> based on viewport and preference
+  const applyThemeClass = useCallback((selectedTheme: Theme, isDesktop: boolean) => {
+    if (typeof document === 'undefined') return;
+    if (isDesktop && selectedTheme === 'dark') {
       document.documentElement.classList.add('dark');
       document.documentElement.classList.remove('light');
     } else {
-      setThemeState('light');
       document.documentElement.classList.remove('dark');
       document.documentElement.classList.add('light');
     }
   }, []);
 
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+
+    const mediaQuery = window.matchMedia('(min-width: 1024px)');
+    const isDesktop = mediaQuery.matches;
+    const saved = (localStorage.getItem('brandnix-theme') as Theme | null) || 'light';
+
+    setThemeState(saved);
+    applyThemeClass(saved, isDesktop);
+
+    const handleMediaChange = (e: MediaQueryListEvent) => {
+      const desktop = e.matches;
+      const currentSaved = (localStorage.getItem('brandnix-theme') as Theme | null) || 'light';
+      applyThemeClass(currentSaved, desktop);
+    };
+
+    mediaQuery.addEventListener('change', handleMediaChange);
+    return () => mediaQuery.removeEventListener('change', handleMediaChange);
+  }, [applyThemeClass]);
+
   const setTheme = (newTheme: Theme) => {
     setThemeState(newTheme);
-    localStorage.setItem('brandnix-theme', newTheme);
-    if (newTheme === 'light') {
-      document.documentElement.classList.remove('dark');
-      document.documentElement.classList.add('light');
-    } else {
-      document.documentElement.classList.add('dark');
-      document.documentElement.classList.remove('light');
-    }
+    try {
+      localStorage.setItem('brandnix-theme', newTheme);
+    } catch (e) {}
+    const isDesktop = typeof window !== 'undefined' && window.matchMedia('(min-width: 1024px)').matches;
+    applyThemeClass(newTheme, isDesktop);
   };
 
   const toggleTheme = () => {
@@ -61,3 +75,4 @@ export const useTheme = () => {
   }
   return context;
 };
+

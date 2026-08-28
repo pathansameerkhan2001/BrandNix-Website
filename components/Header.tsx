@@ -79,8 +79,8 @@ export const Header: React.FC = () => {
           : 'bg-[#08111F] border-b border-[#13243B]/60'
       }`}
     >
-      {/* Main Header Container (Mobile height ~68px-74px, Desktop height ~84px) */}
-      <div className="max-w-[1560px] xl:max-w-[1640px] 2xl:max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 h-[68px] sm:h-[74px] lg:h-[84px] flex items-center justify-between relative">
+      {/* Main Header Container (Mobile height ~66px-72px, Desktop height ~84px) */}
+      <div className="max-w-[1560px] xl:max-w-[1640px] 2xl:max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 h-[66px] sm:h-[72px] lg:h-[84px] flex items-center justify-between relative">
         
         {/* 1. Official Brandnix Logo */}
         <div className="flex-shrink-0 flex items-center">
@@ -163,9 +163,8 @@ export const Header: React.FC = () => {
           </Button>
         </div>
 
-        {/* 4. Mobile Header Right Actions: STRICTLY [ Theme Toggle ] [ Animated Hamburger ] */}
-        <div className="flex items-center gap-2 sm:gap-3 lg:hidden">
-          <ThemeToggle size="sm" />
+        {/* 4. Mobile Header Right Actions: STRICTLY [ Animated Hamburger Only ] */}
+        <div className="flex items-center lg:hidden">
           <motion.button
             type="button"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}

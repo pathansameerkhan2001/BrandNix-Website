@@ -91,8 +91,9 @@ export default function RootLayout({
             __html: `
               (function() {
                 try {
+                  var isDesktop = window.innerWidth >= 1024;
                   var saved = localStorage.getItem('brandnix-theme');
-                  if (saved === 'dark') {
+                  if (isDesktop && saved === 'dark') {
                     document.documentElement.classList.add('dark');
                     document.documentElement.classList.remove('light');
                   } else {

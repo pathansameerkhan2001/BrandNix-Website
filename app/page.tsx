@@ -7,7 +7,7 @@ import Footer from '@/components/Footer';
 
 export default function HomePage() {
   return (
-    <main className="min-h-screen bg-[#F7F8FA] dark:bg-[#0B1320] text-[#0B1320] dark:text-white flex flex-col transition-colors duration-200">
+    <main className="min-h-screen bg-[#F8F9FB] lg:dark:bg-[#0B1320] text-[#0B1320] lg:dark:text-white flex flex-col transition-colors duration-200">
       {/* 1. Official Sticky Brandnix Header */}
       <Header />
 

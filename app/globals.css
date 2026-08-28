@@ -17,22 +17,24 @@ html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
+  overflow-x: clip;
   -webkit-tap-highlight-color: transparent;
 }
 
 body {
-  background-color: #F7F8FA;
+  background-color: #F8F9FB;
   color: #0B1320;
   font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
-  overflow-x: hidden;
+  overflow-x: clip;
   min-height: 100vh;
   transition: background-color 180ms ease, color 180ms ease;
 }
 
-html.dark body {
-  background-color: #0B1320;
-  color: #FFFFFF;
+@media (min-width: 1024px) {
+  html.dark body {
+    background-color: #0B1320;
+    color: #FFFFFF;
+  }
 }
 
 /* ==================== GLOBAL THEME TRANSITION ==================== */
@@ -58,28 +60,28 @@ svg line, svg circle, svg path, svg polygon, .no-theme-transition, [data-framer-
 }
 
 /* ==================== LOGO THEME VISIBILITY ==================== */
-/* Dark Mode Logo (Default) */
+/* Default / Mobile Light Mode Logo */
 .dark-logo {
-  display: block !important;
+  display: none !important;
 }
 .light-logo {
-  display: none !important;
+  display: block !important;
 }
 
-/* Light Mode Logo */
-html.light .dark-logo,
-body.light .dark-logo {
-  display: none !important;
-}
-html.light .light-logo,
-body.light .light-logo {
-  display: block !important;
+/* Desktop Dark Mode Logo */
+@media (min-width: 1024px) {
+  html.dark .dark-logo {
+    display: block !important;
+  }
+  html.dark .light-logo {
+    display: none !important;
+  }
 }
 
 /* ==================== LIGHT MODE GLOBAL STYLES ==================== */
 html.light body,
 body.light {
-  background-color: #F7F8FA !important;
+  background-color: #F8F9FB !important;
   color: #0B1320 !important;
 }
 
