@@ -15,7 +15,7 @@ export const Hero: React.FC = () => {
       <div className="absolute top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-brand-orange/5 dark:bg-brand-blue/30 rounded-full blur-[140px] pointer-events-none" />
       <div className="absolute top-1/2 right-10 w-[600px] h-[600px] bg-brand-orange/[0.04] dark:bg-brand-orange/[0.08] rounded-full blur-[130px] pointer-events-none" />
 
-      <div className="max-w-[1560px] xl:max-w-[1620px] mx-auto px-6 sm:px-8 lg:px-12 xl:px-16 w-full relative z-10">
+      <div className="max-w-[1560px] xl:max-w-[1620px] mx-auto px-4 sm:px-6 lg:px-12 xl:px-16 w-full relative z-10">
         {/*
           RESPONSIVE 2-COLUMN LAYOUT:
           - Desktop (lg:): 12-column grid with generous horizontal gap
@@ -26,10 +26,10 @@ export const Hero: React.FC = () => {
         <div className="flex flex-col lg:grid lg:grid-cols-12 lg:gap-8 xl:gap-12 2xl:gap-16 items-center">
           
           {/* Visual Column:
-              On Mobile: order-1 (appears immediately after Header)
-              On Desktop: order-2 (occupies right 7 columns, enlarged prominent scale)
+              On Mobile: order-1 (appears immediately after Header with compact footprint)
+              On Desktop: order-2 (occupies right 7 columns, prominent scale)
           */}
-          <div className="order-1 lg:order-2 lg:col-span-7 w-full mb-8 sm:mb-10 lg:mb-0 flex justify-center">
+          <div className="order-1 lg:order-2 lg:col-span-7 w-full mb-6 sm:mb-8 lg:mb-0 flex justify-center">
             <HeroVisual />
           </div>
 
@@ -44,17 +44,17 @@ export const Hero: React.FC = () => {
             className="order-2 lg:order-1 lg:col-span-5 text-center lg:text-left flex flex-col items-center lg:items-start lg:-translate-y-8 xl:-translate-y-12 2xl:-translate-y-14"
           >
             {/* 1. Eyebrow Badge */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-50/80 dark:bg-[#13243B]/80 border border-amber-300/80 dark:border-brand-orange/40 text-[#D97706] dark:text-brand-warm mb-5 sm:mb-6 shadow-sm">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-50/80 dark:bg-[#13243B]/80 border border-amber-300/80 dark:border-brand-orange/40 text-[#D97706] dark:text-brand-warm mb-4 sm:mb-5 shadow-xs">
               <span className="w-2 h-2 rounded-full bg-brand-orange animate-pulse" aria-hidden="true" />
-              <span className="text-[11px] sm:text-xs font-bold tracking-[0.2em] uppercase font-inter">
+              <span className="text-[10.5px] sm:text-xs font-bold tracking-[0.2em] uppercase font-inter">
                 DIGITAL SOLUTIONS THAT
               </span>
             </div>
 
-            {/* 2. Main Headline (Playfair Display) */}
+            {/* 2. Main Headline (Playfair Display) - Responsive Clamped Typography */}
             <h1
               id="hero-main-heading"
-              className="font-playfair text-4xl sm:text-5xl md:text-6xl xl:text-7xl font-bold tracking-tight leading-[1.12] mb-5 sm:mb-6 select-none"
+              className="font-playfair text-[36px] min-[375px]:text-[42px] min-[430px]:text-[48px] sm:text-5xl md:text-6xl xl:text-7xl font-bold tracking-tight leading-[1.12] mb-4 sm:mb-5 select-none"
             >
               <span className="block text-[#0B1320] dark:text-white">
                 Drive Growth.
@@ -65,17 +65,17 @@ export const Hero: React.FC = () => {
             </h1>
 
             {/* 3. Supporting Copy (Inter) */}
-            <p className="font-inter text-base sm:text-lg xl:text-xl text-gray-600 dark:text-gray-300 max-w-xl font-normal leading-relaxed mb-7 sm:mb-9 text-center lg:text-left">
+            <p className="font-inter text-sm sm:text-base md:text-lg xl:text-xl text-gray-600 dark:text-gray-300 max-w-xl font-normal leading-[1.6] mb-6 sm:mb-8 text-center lg:text-left">
               We help businesses grow online with smart strategies, creative solutions and technology that delivers measurable results.
             </p>
 
             {/* 4. Single Primary CTA (Strictly ONLY Let's Talk →) */}
             <div className="flex justify-center lg:justify-start w-full">
               <Button
-                href="#contact"
+                href="/contact"
                 variant="primary"
                 size="lg"
-                className="w-full sm:w-auto text-base sm:text-lg font-bold px-8 sm:px-10 py-4 shadow-brand-glow"
+                className="w-full sm:w-auto min-h-[52px] text-base sm:text-lg font-bold px-8 sm:px-10 py-3.5 sm:py-4 shadow-brand-glow rounded-xl"
               >
                 Let&apos;s Talk
               </Button>

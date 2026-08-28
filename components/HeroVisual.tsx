@@ -21,7 +21,7 @@ export const HeroVisual: React.FC = () => {
         <img
           src="/images/brandnix-hero-ecosystem-clean.png"
           alt="Brandnix Digital Growth Ecosystem (Dark)"
-          className="hidden dark:block w-full h-auto max-h-[600px] lg:max-h-[720px] xl:max-h-[820px] 2xl:max-h-[900px] object-contain"
+          className="hidden dark:block w-full h-auto max-h-[220px] min-[375px]:max-h-[250px] sm:max-h-[320px] md:max-h-[380px] lg:max-h-[640px] xl:max-h-[760px] 2xl:max-h-[860px] object-contain"
           width={721}
           height={561}
           loading="eager"
@@ -32,7 +32,7 @@ export const HeroVisual: React.FC = () => {
         <img
           src="/images/brandnix-hero-ecosystem-light.png"
           alt="Brandnix Digital Growth Ecosystem (Light)"
-          className="block dark:hidden w-full h-auto max-h-[600px] lg:max-h-[720px] xl:max-h-[820px] 2xl:max-h-[900px] object-contain"
+          className="block dark:hidden w-full h-auto max-h-[220px] min-[375px]:max-h-[250px] sm:max-h-[320px] md:max-h-[380px] lg:max-h-[640px] xl:max-h-[760px] 2xl:max-h-[860px] object-contain"
           width={924}
           height={556}
           loading="eager"

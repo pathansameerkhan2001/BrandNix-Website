@@ -22,13 +22,13 @@ export const BrandnixLogo: React.FC<BrandnixLogoProps> = ({
   size = 'md',
   forceDark = false,
 }) => {
-  // Height sizing: Mobile h-[38px] to h-[42px]; Desktop h-[46px] to h-[50px]
+  // Responsive scaling: Mobile h-[32px] to h-[36px]; Tablet h-[38px] to h-[42px]; Desktop h-[46px] to h-[50px]
   const heightStyles =
     size === 'sm'
-      ? 'h-[36px] sm:h-[40px] max-w-[210px] sm:max-w-[230px]'
+      ? 'h-[28px] sm:h-[34px] max-w-[130px] sm:max-w-[170px]'
       : size === 'lg'
-      ? 'h-[50px] sm:h-[56px] max-w-[290px] sm:max-w-[330px]'
-      : 'h-[44px] sm:h-[48px] max-w-[250px] sm:max-w-[280px]';
+      ? 'h-[42px] sm:h-[50px] lg:h-[56px] max-w-[210px] sm:max-w-[280px] lg:max-w-[330px]'
+      : 'h-[32px] min-[375px]:h-[35px] sm:h-[40px] lg:h-[46px] max-w-[145px] min-[375px]:max-w-[168px] sm:max-w-[200px] lg:max-w-[250px]';
 
   const logoContent = (
     <div className={`inline-flex items-center select-none group cursor-pointer ${className}`}>

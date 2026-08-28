@@ -3,7 +3,8 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { ChevronDown, Menu, X, ChevronRight, Plus, Minus } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { ChevronDown, ChevronRight, Plus, Minus } from 'lucide-react';
 import BrandnixLogo from '@/components/common/BrandnixLogo';
 import ThemeToggle from '@/components/common/ThemeToggle';
 import Button from '@/components/common/Button';
@@ -78,8 +79,8 @@ export const Header: React.FC = () => {
           : 'bg-[#08111F] border-b border-[#13243B]/60'
       }`}
     >
-      {/* Main Header Container (Desktop height ~84px) */}
-      <div className="max-w-[1560px] xl:max-w-[1640px] 2xl:max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 h-20 sm:h-[84px] flex items-center justify-between relative">
+      {/* Main Header Container (Mobile height ~68px-74px, Desktop height ~84px) */}
+      <div className="max-w-[1560px] xl:max-w-[1640px] 2xl:max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 h-[68px] sm:h-[74px] lg:h-[84px] flex items-center justify-between relative">
         
         {/* 1. Official Brandnix Logo */}
         <div className="flex-shrink-0 flex items-center">
@@ -153,7 +154,7 @@ export const Header: React.FC = () => {
           })}
         </nav>
 
-        {/* 3. Desktop Right Action Group: Theme Toggle | Let's Talk CTA */}
+        {/* 3. Desktop Right Action Group: Theme Toggle | Let's Talk CTA (STRICTLY RETAINED ON DESKTOP) */}
         <div className="hidden lg:flex items-center gap-3.5 xl:gap-4">
           <ThemeToggle size="md" />
           <div className="h-6 w-[1px] bg-[#13243B] opacity-80" aria-hidden="true" />
@@ -162,31 +163,34 @@ export const Header: React.FC = () => {
           </Button>
         </div>
 
-        {/* 4. Mobile Header Right Actions: [ Let's Talk ] [ ☀ ] | [ ☰ ] */}
-        <div className="flex items-center gap-2 sm:gap-2.5 lg:hidden">
-          <Button
-            href="/contact"
-            variant="primary"
-            size="sm"
-            className="px-3 sm:px-4 py-2 min-h-[38px] text-xs sm:text-sm font-bold shadow-none"
-          >
-            Let&apos;s Talk
-          </Button>
+        {/* 4. Mobile Header Right Actions: STRICTLY [ Theme Toggle ] [ Animated Hamburger ] */}
+        <div className="flex items-center gap-2 sm:gap-3 lg:hidden">
           <ThemeToggle size="sm" />
-          <div className="h-6 w-[1px] bg-[#13243B] mx-0.5" aria-hidden="true" />
-          <button
+          <motion.button
             type="button"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.94 }}
             aria-label={isMobileMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
             aria-expanded={isMobileMenuOpen}
-            className="w-10 h-10 sm:w-11 sm:h-11 flex items-center justify-center rounded-lg text-white hover:text-brand-orange bg-[#13243B]/40 hover:bg-[#13243B] border border-[#13243B] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-orange"
+            className="w-11 h-11 min-w-[44px] min-h-[44px] flex flex-col items-center justify-center gap-1.5 rounded-xl text-white hover:text-brand-orange bg-[#13243B]/60 hover:bg-[#13243B] border border-[#13243B] hover:border-brand-orange/40 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-orange select-none"
           >
-            {isMobileMenuOpen ? (
-              <X className="w-6 h-6 text-brand-orange" />
-            ) : (
-              <Menu className="w-6 h-6 text-white" />
-            )}
-          </button>
+            <motion.span
+              animate={isMobileMenuOpen ? { rotate: 45, y: 7.5 } : { rotate: 0, y: 0 }}
+              transition={{ duration: 0.2 }}
+              className="w-5 h-[2px] bg-current rounded-full block origin-center"
+            />
+            <motion.span
+              animate={isMobileMenuOpen ? { opacity: 0, x: -6 } : { opacity: 1, x: 0 }}
+              transition={{ duration: 0.16 }}
+              className="w-5 h-[2px] bg-current rounded-full block"
+            />
+            <motion.span
+              animate={isMobileMenuOpen ? { rotate: -45, y: -7.5 } : { rotate: 0, y: 0 }}
+              transition={{ duration: 0.2 }}
+              className="w-5 h-[2px] bg-current rounded-full block origin-center"
+            />
+          </motion.button>
         </div>
 
         {/* Desktop Mega-Menu Container */}
@@ -194,12 +198,17 @@ export const Header: React.FC = () => {
       </div>
 
       {/* ==================== MOBILE ACCORDION NAVIGATION ==================== */}
-      {isMobileMenuOpen && (
-        <div
-          className="lg:hidden w-full bg-[#08111F] border-t border-[#13243B] shadow-2xl transition-all duration-300 max-h-[85vh] overflow-y-auto"
-          role="dialog"
-          aria-label="Mobile Navigation Menu"
-        >
+      <AnimatePresence>
+        {isMobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
+            className="lg:hidden w-full bg-[#08111F] border-t border-[#13243B] shadow-2xl overflow-hidden max-h-[85vh] overflow-y-auto"
+            role="dialog"
+            aria-label="Mobile Navigation Menu"
+          >
           <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex flex-col">
             <nav className="flex flex-col divide-y divide-[#13243B]/80" aria-label="Mobile Links">
               
@@ -368,8 +377,9 @@ export const Header: React.FC = () => {
             </div>
 
           </div>
-        </div>
+        </motion.div>
       )}
+      </AnimatePresence>
     </header>
   );
 };

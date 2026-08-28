@@ -8,11 +8,11 @@ export const CtaSection: React.FC = () => {
   return (
     <section
       id="contact"
-      className="relative bg-white dark:bg-[#0B1320] py-20 sm:py-24 lg:py-28 overflow-hidden transition-colors duration-300 border-t border-gray-100 dark:border-[#13243B]/40"
+      className="relative bg-white dark:bg-[#0B1320] py-16 sm:py-20 lg:py-24 overflow-hidden transition-colors duration-300 border-t border-gray-100 dark:border-[#13243B]/40"
       aria-labelledby="cta-section-heading"
     >
-      <div className="max-w-[1440px] mx-auto px-6 sm:px-8 lg:px-12 xl:px-16 w-full relative z-10">
-        <div className="rounded-3xl bg-gray-50 dark:bg-[#0E1726] border border-gray-200/80 dark:border-[#13243B] overflow-hidden shadow-xl lg:grid lg:grid-cols-12 items-center">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 xl:px-16 w-full relative z-10">
+        <div className="rounded-3xl bg-gray-50/90 dark:bg-[#0E1726] border border-gray-200/80 dark:border-[#13243B] overflow-hidden shadow-xl lg:grid lg:grid-cols-12 items-center">
           
           {/* LEFT COLUMN: Content & CTA (7 cols) */}
           <motion.div
@@ -20,17 +20,17 @@ export const CtaSection: React.FC = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: '-40px' }}
             transition={{ duration: 0.5 }}
-            className="p-8 sm:p-12 lg:p-14 xl:p-16 lg:col-span-7 flex flex-col items-start"
+            className="p-6 sm:p-10 lg:p-12 xl:p-14 lg:col-span-7 flex flex-col items-start"
           >
             {/* 1. Eyebrow */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-brand-orange/10 border border-brand-orange/30 text-brand-orange text-xs font-bold tracking-[0.2em] uppercase font-inter mb-5">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-brand-orange/10 border border-brand-orange/30 text-brand-orange text-xs font-bold tracking-[0.2em] uppercase font-inter mb-4 sm:mb-5">
               <span>READY TO GROW YOUR BUSINESS?</span>
             </div>
 
             {/* 2. Headline */}
             <h2
               id="cta-section-heading"
-              className="font-playfair text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0B1320] dark:text-white leading-[1.15] tracking-tight mb-5"
+              className="font-playfair text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0B1320] dark:text-white leading-[1.15] tracking-tight mb-4 sm:mb-5"
             >
               Let&apos;s Build Something<br />
               <span>Exceptional </span>
@@ -38,18 +38,17 @@ export const CtaSection: React.FC = () => {
             </h2>
 
             {/* 3. Supporting Text */}
-            <p className="font-inter text-base sm:text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-8 max-w-lg">
+            <p className="font-inter text-base sm:text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-6 sm:mb-8 max-w-lg">
               Tell us about your project and let&apos;s create something impactful together.
             </p>
 
             {/* 4. Primary Action Button */}
-            <div>
+            <div className="w-full sm:w-auto">
               <Button
-                href="mailto:brandnix.in@gmail.com"
-                aria-label="Email Brandnix"
+                href="/contact"
                 variant="primary"
                 size="lg"
-                className="px-8 sm:px-10 py-4 text-base font-bold shadow-brand-glow"
+                className="w-full sm:w-auto min-h-[52px] px-8 sm:px-10 py-3.5 sm:py-4 text-base font-bold shadow-brand-glow rounded-xl"
               >
                 Get In Touch
               </Button>

@@ -277,8 +277,8 @@ export const AboutTeam: React.FC = () => {
 
     animate(x, targetX, {
       type: 'spring',
-      stiffness: 300,
-      damping: 30,
+      stiffness: 250,
+      damping: 28,
     });
   };
 
@@ -379,7 +379,7 @@ export const AboutTeam: React.FC = () => {
                 style={{
                   transform: `translateY(${member.waveOffset}px)`,
                 }}
-                className={`w-[290px] sm:w-[320px] lg:w-[335px] flex-shrink-0 group rounded-3xl bg-white dark:bg-[#13243B]/40 border p-6 flex flex-col justify-between transition-all duration-300 cursor-pointer ${
+                className={`w-[270px] min-[375px]:w-[295px] sm:w-[320px] lg:w-[335px] flex-shrink-0 group rounded-3xl bg-white dark:bg-[#13243B]/40 border p-5 sm:p-6 flex flex-col justify-between transition-all duration-300 cursor-pointer ${
                   isSelected
                     ? 'border-brand-orange shadow-2xl scale-[1.03] -translate-y-2 ring-2 ring-brand-orange/30'
                     : 'border-gray-200/80 dark:border-[#13243B] hover:border-brand-orange/60 hover:-translate-y-2 hover:scale-[1.03] shadow-xs hover:shadow-2xl'

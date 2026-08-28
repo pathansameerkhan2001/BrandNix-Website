@@ -22,51 +22,51 @@ export const Footer: React.FC = () => {
               We are a digital solutions company helping businesses grow with creativity, technology and performance.
             </p>
             {/* Social Icons */}
-            <div className="flex items-center gap-2.5">
+            <div className="flex flex-wrap items-center gap-2.5">
               <Link
                 href="https://wa.me/919876543210"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="WhatsApp"
-                className="w-9 h-9 rounded-full bg-[#13243B] text-gray-300 hover:text-[#22C55E] hover:bg-[#22C55E]/10 flex items-center justify-center transition-all border border-[#13243B] hover:border-[#22C55E]/40"
+                className="w-11 h-11 min-w-[44px] min-h-[44px] rounded-full bg-[#13243B] text-gray-300 hover:text-[#22C55E] hover:bg-[#22C55E]/10 flex items-center justify-center transition-all border border-[#13243B] hover:border-[#22C55E]/40"
               >
-                <MessageCircle className="w-4 h-4" />
+                <MessageCircle className="w-5 h-5" />
               </Link>
               <Link
                 href="https://www.instagram.com/_brandnix"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
-                className="w-9 h-9 rounded-full bg-[#13243B] text-gray-300 hover:text-[#EC4899] hover:bg-[#EC4899]/10 flex items-center justify-center transition-all border border-[#13243B] hover:border-[#EC4899]/40"
+                className="w-11 h-11 min-w-[44px] min-h-[44px] rounded-full bg-[#13243B] text-gray-300 hover:text-[#EC4899] hover:bg-[#EC4899]/10 flex items-center justify-center transition-all border border-[#13243B] hover:border-[#EC4899]/40"
               >
-                <Instagram className="w-4 h-4" />
+                <Instagram className="w-5 h-5" />
               </Link>
               <Link
                 href="https://www.facebook.com/share/1JoBtpW4dG/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Facebook"
-                className="w-9 h-9 rounded-full bg-[#13243B] text-gray-300 hover:text-[#3B82F6] hover:bg-[#3B82F6]/10 flex items-center justify-center transition-all border border-[#13243B] hover:border-[#3B82F6]/40"
+                className="w-11 h-11 min-w-[44px] min-h-[44px] rounded-full bg-[#13243B] text-gray-300 hover:text-[#3B82F6] hover:bg-[#3B82F6]/10 flex items-center justify-center transition-all border border-[#13243B] hover:border-[#3B82F6]/40"
               >
-                <Facebook className="w-4 h-4" />
+                <Facebook className="w-5 h-5" />
               </Link>
               <Link
                 href="https://www.linkedin.com/company/adnix1/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
-                className="w-9 h-9 rounded-full bg-[#13243B] text-gray-300 hover:text-[#0A66C2] hover:bg-[#0A66C2]/10 flex items-center justify-center transition-all border border-[#13243B] hover:border-[#0A66C2]/40"
+                className="w-11 h-11 min-w-[44px] min-h-[44px] rounded-full bg-[#13243B] text-gray-300 hover:text-[#0A66C2] hover:bg-[#0A66C2]/10 flex items-center justify-center transition-all border border-[#13243B] hover:border-[#0A66C2]/40"
               >
-                <Linkedin className="w-4 h-4" />
+                <Linkedin className="w-5 h-5" />
               </Link>
               <Link
                 href="https://youtube.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="YouTube"
-                className="w-9 h-9 rounded-full bg-[#13243B] text-gray-300 hover:text-[#EF4444] hover:bg-[#EF4444]/10 flex items-center justify-center transition-all border border-[#13243B] hover:border-[#EF4444]/40"
+                className="w-11 h-11 min-w-[44px] min-h-[44px] rounded-full bg-[#13243B] text-gray-300 hover:text-[#EF4444] hover:bg-[#EF4444]/10 flex items-center justify-center transition-all border border-[#13243B] hover:border-[#EF4444]/40"
               >
-                <Youtube className="w-4 h-4" />
+                <Youtube className="w-5 h-5" />
               </Link>
             </div>
           </div>

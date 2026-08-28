@@ -38,8 +38,8 @@ export const AboutCta: React.FC = () => {
             <Button
               href="/contact"
               variant="primary"
-              size="md"
-              className="w-full sm:w-auto px-7 py-3.5 text-sm sm:text-base font-bold shadow-brand-glow"
+              size="lg"
+              className="w-full sm:w-auto min-h-[48px] sm:min-h-[52px] px-8 sm:px-10 py-3.5 sm:py-4 text-sm sm:text-base font-bold shadow-brand-glow rounded-xl"
             >
               Let’s Work Together
             </Button>

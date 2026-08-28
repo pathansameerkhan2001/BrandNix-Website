@@ -299,13 +299,13 @@ export const ContactFormSection: React.FC = () => {
               <h3 className="font-inter text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-3">
                 Follow Us
               </h3>
-              <div className="flex items-center gap-3">
+              <div className="flex flex-wrap items-center gap-2.5">
                 {/* Facebook */}
                 <Link
                   href="https://www.facebook.com/share/1JoBtpW4dG/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-xl bg-[#1877F2]/10 hover:bg-[#1877F2] text-[#1877F2] hover:text-white border border-[#1877F2]/25 flex items-center justify-center font-bold text-sm transition-all"
+                  className="w-11 h-11 min-w-[44px] min-h-[44px] rounded-xl bg-[#1877F2]/10 hover:bg-[#1877F2] text-[#1877F2] hover:text-white border border-[#1877F2]/25 flex items-center justify-center font-bold text-sm transition-all"
                   aria-label="Facebook"
                 >
                   f
@@ -315,7 +315,7 @@ export const ContactFormSection: React.FC = () => {
                   href="https://www.instagram.com/_brandnix"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-xl bg-pink-500/10 hover:bg-gradient-to-tr hover:from-[#F59E0B] hover:via-[#EC4899] hover:to-[#8B5CF6] text-pink-500 hover:text-white border border-pink-500/25 flex items-center justify-center font-bold text-xs transition-all"
+                  className="w-11 h-11 min-w-[44px] min-h-[44px] rounded-xl bg-pink-500/10 hover:bg-gradient-to-tr hover:from-[#F59E0B] hover:via-[#EC4899] hover:to-[#8B5CF6] text-pink-500 hover:text-white border border-pink-500/25 flex items-center justify-center font-bold text-xs transition-all"
                   aria-label="Instagram"
                 >
                   IG
@@ -325,7 +325,7 @@ export const ContactFormSection: React.FC = () => {
                   href="https://www.linkedin.com/company/adnix1/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-xl bg-[#0A66C2]/10 hover:bg-[#0A66C2] text-[#0A66C2] hover:text-white border border-[#0A66C2]/25 flex items-center justify-center font-bold text-xs transition-all"
+                  className="w-11 h-11 min-w-[44px] min-h-[44px] rounded-xl bg-[#0A66C2]/10 hover:bg-[#0A66C2] text-[#0A66C2] hover:text-white border border-[#0A66C2]/25 flex items-center justify-center font-bold text-xs transition-all"
                   aria-label="LinkedIn"
                 >
                   in
@@ -335,7 +335,7 @@ export const ContactFormSection: React.FC = () => {
                   href="https://twitter.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-xl bg-gray-900/10 dark:bg-white/10 hover:bg-black dark:hover:bg-white text-gray-900 dark:text-white dark:hover:text-black border border-gray-400/25 flex items-center justify-center font-bold text-xs transition-all"
+                  className="w-11 h-11 min-w-[44px] min-h-[44px] rounded-xl bg-gray-900/10 dark:bg-white/10 hover:bg-black dark:hover:bg-white text-gray-900 dark:text-white dark:hover:text-black border border-gray-400/25 flex items-center justify-center font-bold text-xs transition-all"
                   aria-label="X"
                 >
                   ✕
@@ -345,7 +345,7 @@ export const ContactFormSection: React.FC = () => {
                   href="https://youtube.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-xl bg-[#FF0000]/10 hover:bg-[#FF0000] text-[#FF0000] hover:text-white border border-[#FF0000]/25 flex items-center justify-center font-bold text-xs transition-all"
+                  className="w-11 h-11 min-w-[44px] min-h-[44px] rounded-xl bg-[#FF0000]/10 hover:bg-[#FF0000] text-[#FF0000] hover:text-white border border-[#FF0000]/25 flex items-center justify-center font-bold text-xs transition-all"
                   aria-label="YouTube"
                 >
                   ▶

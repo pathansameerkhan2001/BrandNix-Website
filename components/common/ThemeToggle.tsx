@@ -4,6 +4,8 @@ import React, { useEffect, useState } from 'react';
 import { Sun, Moon } from 'lucide-react';
 import { useTheme } from '@/context/ThemeContext';
 
+import { motion } from 'framer-motion';
+
 interface ThemeToggleProps {
   className?: string;
   size?: 'sm' | 'md';
@@ -20,26 +22,33 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '', size =
   const isLight = mounted && theme === 'light';
   const ariaLabel = isLight ? 'Switch to dark mode' : 'Switch to light mode';
 
-  const buttonSizeClasses = size === 'sm' ? 'w-9 h-9 sm:w-10 sm:h-10 min-w-[36px]' : 'w-10 h-10 sm:w-11 sm:h-11 min-w-[40px]';
+  // Guaranteed 44px x 44px minimum touch target for both mobile and desktop
+  const buttonSizeClasses =
+    size === 'sm'
+      ? 'w-11 h-11 min-w-[44px] min-h-[44px]'
+      : 'w-11 h-11 min-w-[44px] min-h-[44px]';
 
   return (
-    <button
+    <motion.button
       type="button"
       onClick={toggleTheme}
+      whileHover={{ scale: 1.05 }}
+      whileTap={{ scale: 0.94 }}
+      transition={{ duration: 0.15 }}
       aria-label={ariaLabel}
       title={ariaLabel}
-      className={`relative inline-flex items-center justify-center rounded-lg border transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-orange select-none ${buttonSizeClasses} ${
+      className={`relative inline-flex items-center justify-center rounded-xl border transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-orange select-none ${buttonSizeClasses} ${
         isLight
-          ? 'bg-white hover:bg-gray-100 border-gray-300 text-brand-orange shadow-sm'
-          : 'bg-[#13243B] hover:bg-[#182c47] border-[#13243B] hover:border-brand-orange/40 text-brand-orange shadow-inner'
+          ? 'bg-white hover:bg-amber-50/60 border-gray-200 text-amber-500 shadow-xs'
+          : 'bg-[#13243B]/80 hover:bg-[#182c47] border-[#13243B] hover:border-brand-orange/40 text-brand-orange shadow-xs'
       } ${className}`}
     >
       {isLight ? (
-        <Moon className="w-5 h-5 text-brand-orange transition-transform duration-200 hover:rotate-12" aria-hidden="true" />
+        <Moon className="w-5 h-5 text-brand-orange transition-transform duration-200" aria-hidden="true" />
       ) : (
-        <Sun className="w-5 h-5 text-brand-orange transition-transform duration-200 hover:rotate-45" aria-hidden="true" />
+        <Sun className="w-5 h-5 text-brand-orange transition-transform duration-200" aria-hidden="true" />
       )}
-    </button>
+    </motion.button>
   );
 };
 

@@ -8,13 +8,13 @@ export const WhoWeAre: React.FC = () => {
   return (
     <section
       id="overview"
-      className="relative bg-white dark:bg-[#0B1320] py-20 sm:py-24 lg:py-28 xl:py-32 overflow-hidden transition-colors duration-300 border-t border-gray-100 dark:border-[#13243B]/40"
+      className="relative bg-white dark:bg-[#0B1320] py-16 sm:py-20 lg:py-24 xl:py-28 overflow-hidden transition-colors duration-300 border-t border-gray-100 dark:border-[#13243B]/40"
       aria-labelledby="who-we-are-heading"
     >
       {/* Subtle ambient lighting */}
       <div className="absolute top-1/2 left-0 -translate-y-1/2 w-[500px] h-[500px] bg-brand-orange/5 dark:bg-brand-blue/20 rounded-full blur-[140px] pointer-events-none" />
 
-      <div className="max-w-[1440px] mx-auto px-6 sm:px-8 lg:px-12 xl:px-16 w-full relative z-10">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 xl:px-16 w-full relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 xl:gap-18 items-center">
           
           {/* LEFT COLUMN: Editorial Content & 3 Value Points (7 cols) */}
